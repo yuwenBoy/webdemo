@@ -1,3 +1,3 @@
 <template>
-    <div>新闻1111</div>
+    <div>新闻列表</div>
 </template>

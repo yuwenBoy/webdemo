@@ -2,10 +2,10 @@
     <div id="app">
         <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-        <!-- <router-link to="/home">主页</router-link>
+        <router-link to="/home">主页</router-link>
         <router-link to="/news">新闻</router-link>
         <router-link to="/userList">用户列表</router-link>
-        <router-link to="/userAdd">新增用户</router-link> -->
+        <router-link to="/userAdd">新增用户</router-link>
         <router-view />
     </div>
 </template>
@@ -22,12 +22,12 @@
 </script>
 
 <style>
-    /* #app {
+    #app {
         font-family: Avenir, Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
         margin-top: 60px;
-    } */
+    }
 </style>

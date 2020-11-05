@@ -1,0 +1,148 @@
+html,
+body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: auto;
+}
+
+ul,
+li {
+    list-style: none;
+    display: block;
+}
+
+.main-snakLine {
+    width: 100%;
+    min-width: 500px;
+    height: 100%;
+    margin: 0px;
+    padding: 20px;
+    overflow: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.snakLine {
+    width: 100%;
+    height: 100px;
+    position: relative;
+}
+
+.snakLine::before {
+    content: '';
+    width: calc(100% - 100px);
+    height: 4px;
+    background-color: #008bcc;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 2px);
+    left: 50px;
+}
+
+/* .snakLine:first-child::before, */
+.snakLine:last-child::after {
+    border: 0 !important;
+    display: none !important;
+}
+
+.snakLine:nth-child(even)::before {
+    width: calc(100% - 100px);
+    left: 50px;
+    margin-right: 50px;
+    margin-top: 4px;
+}
+
+/*濂囨暟*/
+.snakLine:nth-child(odd)::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 100px;
+    border: 4px solid #008bcc;
+    border-radius: 0 100px 100px 0;
+    position: absolute;
+    right: 0;
+    top: 48px;
+    border-left: 0px;
+}
+
+/*鍋舵暟*/
+.snakLine:nth-child(even):after {
+    content: '';
+    display: block;
+    width: 91px;
+    height: 92px;
+    border: 4px solid #008bcc;
+    border-radius: 100px 0 0 100px;
+    position: absolute;
+    top: 52px;
+    border-right: 0;
+}
+
+.main-box {
+    width: fit-content;
+    height: 100px;
+    position: relative;
+    z-index: 1;
+    margin: 0px auto;
+    display: flex;
+    padding: 0;
+}
+
+.main-box li {
+    width: 100px;
+    height: 60px;
+    padding: 0 5px;
+    margin: 20px 20px;
+    color: #fff;
+    background-color: rgb(109, 109, 109);
+    border-radius: 0 15px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 5px #c5c5c5;
+    display: flex;
+    word-break: break-word;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-box li:hover {
+    box-shadow: 1px 1px 8px #c5c5c5;
+}
+
+.end-circle,
+.begin-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 4px solid #008bcc;
+    position: absolute;
+    right: 25px;
+    top: 35px;
+}
+
+.snakLine:nth-child(even) .end-circle {
+    left: 25px;
+    top: 40px;
+}
+
+.begin-circle {
+    left: 25px;
+    top: 36px;
+}
+
+.green {
+    background-color: rgb(0, 255, 0) !important;
+}
+
+.yellow {
+    background-color: rgb(255, 255, 0) !important;
+    color: #333 !important;
+}
+
+.red {
+    background-color: rgb(255, 0, 0) !important;
+}

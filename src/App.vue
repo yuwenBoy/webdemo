@@ -1,11 +1,7 @@
 <template>
     <div id="app">
-        <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-        <!-- <router-link to="/home">主页</router-link>
-        <router-link to="/news">新闻</router-link>
-        <router-link to="/userList">用户列表</router-link>
-        <router-link to="/userAdd">新增用户</router-link> -->
+        <!-- 路由出口 -->
+        <!-- 路由匹配到的组件将渲染到这里 -->
         <router-view />
     </div>
 </template>

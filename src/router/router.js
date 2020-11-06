@@ -18,8 +18,12 @@ export default {
             component: () => import("@/views/userAdd")
         },
         {
+            path: '/index',
+            component: () => import("@/views/index")
+        },
+        {
             path: '*',
-            redirect: '/home'
+            redirect: '/index'
         }
     ]
 }

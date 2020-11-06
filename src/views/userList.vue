@@ -1,6 +1,11 @@
 <template>
-    <div class="box" :style="{background:bankground}">
-        123
+    <div>
+        <header>
+            <button @click="back">返回上一级</button>
+        </header>
+        <div class="box" :style="{background:bankground}">
+            123
+        </div>
     </div>
 </template>
 
@@ -21,7 +26,9 @@
             }, 1000);
         },
         methods: {
-
+            back() {
+                window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
+            }
         }
     }
 </script>

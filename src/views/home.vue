@@ -1,7 +1,12 @@
 <template>
 
     <div class="box">
-        <header>header</header>
+        <header>
+            <router-link to="/home">主页</router-link>
+            <router-link to="/news">新闻</router-link>
+            <router-link to="/userList">用户列表</router-link>
+            <router-link to="/userAdd">新增用户</router-link>
+        </header>
         <main class="box-content">
             <div id="mainSnakLine" class="main-snakLine">
                 <div class="snakLine" v-for="(row,index) in snckData">
